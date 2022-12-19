@@ -144,7 +144,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <section>
+        <div>Tic-tac-toi</div>
+         
+         <section>
         <div onClick={firstDivClick}>{firstDiv===0?null:(firstDiv%2===1?"x":"o")}</div>
         <div onClick={secondDivClick}>{secondDiv===0?null:(secondDiv%2===1?"x":"o")}</div>
         <div onClick={thirdDivClick}>{thirdDiv===0?null:(thirdDiv%2===1?"x":"o")}</div>
@@ -155,13 +157,15 @@ function App() {
         <div onClick={eighthDivClick}>{eighthDiv===0?null:(eighthDiv%2===1?"x":"o")}</div>
         <div onClick={ninthhDivClick}>{ninthDiv===0?null:(ninthDiv%2===1?"x":"o")}</div>
        </section>
+      </header>
+       
        {show&&<article>
                 <div className='popupdiv'>
                  <p>Won {winner}!</p>
                   <button onClick={resetResult}>Reset</button>
                 </div>   
               </article>}
-      </header>
+      
       
     </div>
    
