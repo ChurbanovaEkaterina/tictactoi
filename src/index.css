@@ -17,6 +17,7 @@ section{
   grid-template-rows: 120px 120px 120px;
   column-gap: 2px;
   row-gap: 2px;
+  justify-items: center;
 }
 section div{
   width: 120px;
@@ -28,14 +29,13 @@ section div{
 }
 article{
   position: fixed;
-  background: #00000050;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background: #00000050;
+    width: 200vh;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 artical p{
