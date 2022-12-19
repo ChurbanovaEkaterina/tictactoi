@@ -17,30 +17,28 @@ function App() {
 
   const xSignt ="X"
   const ySignt ="O"
-  const compairingO = (firstDiv%2===0&&firstDiv!==0&&secondDiv%2===0&&secondDiv!==0&&thirdDiv%2===0&&thirdDiv!==0)||
-  (firstDiv%2===0&&firstDiv!==0&&fourthDiv%2===0&&fourthDiv!==0&&seventhtDiv%2===0&&seventhtDiv!==0)||
-  (ninthDiv%2===0&&ninthDiv!==0&&eighthDiv%2===0&&eighthDiv!==0&&seventhtDiv%2===0&&seventhtDiv!==0)||
-  (thirdDiv%2===0&&thirdDiv!==0&&sixthDiv%2===0&&sixthDiv!==0&&seventhtDiv%2===0&&seventhtDiv!==0)||
-  (fourthDiv%2===0&&fourthDiv!==0&&fifthDiv%2===0&&fifthDiv!==0&&sixthDiv%2===0&&sixthDiv!==0)|| 
-  (secondDiv%2===0&&secondDiv!==0&&fifthDiv%2===0&&fifthDiv!==0&&eighthDiv%2===0&&eighthDiv!==0)||
-  (firstDiv%2===0&&firstDiv!==0&&fifthDiv%2===0&&fifthDiv!==0&&ninthDiv%2===0&&ninthDiv!==0)||
-  (thirdDiv%2===0&&thirdDiv!==0&&fifthDiv%2===0&&fifthDiv!==0&&seventhtDiv%2===0&&seventhtDiv!==0)
   
 
-  const compairingX=(firstDiv%2===1&&firstDiv!==0&&secondDiv%2===1&&secondDiv!==0&&thirdDiv%2===1&&thirdDiv!==0)||
-  (firstDiv%2===1&&firstDiv!==0&&fourthDiv%2===1&&fourthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)||
-  (ninthDiv%2===1&&ninthDiv!==0&&eighthDiv%2===1&&eighthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)||
-  (thirdDiv%2===1&&thirdDiv!==0&&sixthDiv%2===1&&sixthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)||
-  (fourthDiv%2===1&&fourthDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&sixthDiv%2===1&&sixthDiv!==0)||
-  (secondDiv%2===1&&secondDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&eighthDiv%2===1&&eighthDiv!==0)||
-  (firstDiv%2===1&&firstDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&ninthDiv%2===1&&ninthDiv!==0)||
-  (thirdDiv%2===1&&thirdDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)
-
+  
   useEffect(()=>{
-    if(compairingO){
+    if((firstDiv%2===0&&firstDiv!==0&&secondDiv%2===0&&secondDiv!==0&&thirdDiv%2===0&&thirdDiv!==0)||
+    (firstDiv%2===0&&firstDiv!==0&&fourthDiv%2===0&&fourthDiv!==0&&seventhtDiv%2===0&&seventhtDiv!==0)||
+    (ninthDiv%2===0&&ninthDiv!==0&&eighthDiv%2===0&&eighthDiv!==0&&seventhtDiv%2===0&&seventhtDiv!==0)||
+    (thirdDiv%2===0&&thirdDiv!==0&&sixthDiv%2===0&&sixthDiv!==0&&seventhtDiv%2===0&&seventhtDiv!==0)||
+    (fourthDiv%2===0&&fourthDiv!==0&&fifthDiv%2===0&&fifthDiv!==0&&sixthDiv%2===0&&sixthDiv!==0)|| 
+    (secondDiv%2===0&&secondDiv!==0&&fifthDiv%2===0&&fifthDiv!==0&&eighthDiv%2===0&&eighthDiv!==0)||
+    (firstDiv%2===0&&firstDiv!==0&&fifthDiv%2===0&&fifthDiv!==0&&ninthDiv%2===0&&ninthDiv!==0)||
+    (thirdDiv%2===0&&thirdDiv!==0&&fifthDiv%2===0&&fifthDiv!==0&&seventhtDiv%2===0&&seventhtDiv!==0)){
       setShow(true)
       setWinner(ySignt)
-    }else if(compairingX){
+    }else if((firstDiv%2===1&&firstDiv!==0&&secondDiv%2===1&&secondDiv!==0&&thirdDiv%2===1&&thirdDiv!==0)||
+    (firstDiv%2===1&&firstDiv!==0&&fourthDiv%2===1&&fourthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)||
+    (ninthDiv%2===1&&ninthDiv!==0&&eighthDiv%2===1&&eighthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)||
+    (thirdDiv%2===1&&thirdDiv!==0&&sixthDiv%2===1&&sixthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)||
+    (fourthDiv%2===1&&fourthDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&sixthDiv%2===1&&sixthDiv!==0)||
+    (secondDiv%2===1&&secondDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&eighthDiv%2===1&&eighthDiv!==0)||
+    (firstDiv%2===1&&firstDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&ninthDiv%2===1&&ninthDiv!==0)||
+    (thirdDiv%2===1&&thirdDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)){
       setShow(true)
       setWinner(xSignt)
     }else{
