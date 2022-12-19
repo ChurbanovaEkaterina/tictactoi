@@ -14,6 +14,7 @@ function App() {
   const [count, setCount]=useState(2)
   const [show, setShow]=useState(false)
   const [winner, setWinner]=useState("")
+  const [draw, setDraw]=useState(false)
 
   const xSignt ="X"
   const ySignt ="O"
@@ -41,8 +42,8 @@ function App() {
     (thirdDiv%2===1&&thirdDiv!==0&&fifthDiv%2===1&&fifthDiv!==0&&seventhtDiv%2===1&&seventhtDiv!==0)){
       setShow(true)
       setWinner(xSignt)
-    }else{
-      return setShow(false)
+    }else if(count===11){
+      setDraw(true)
     }
   }, [count])
 
@@ -61,6 +62,7 @@ function App() {
     setCount(2)
     setShow(false)
     setWinner("") 
+    setDraw(false)
   }
 
   const firstDivClick=()=>{
@@ -142,6 +144,7 @@ function App() {
 
 
   return (
+  <>
     <div className="App">
       <header className="App-header">
         <div>Tic-tac-toi</div>
@@ -157,18 +160,21 @@ function App() {
         <div onClick={eighthDivClick}>{eighthDiv===0?null:(eighthDiv%2===1?"x":"o")}</div>
         <div onClick={ninthhDivClick}>{ninthDiv===0?null:(ninthDiv%2===1?"x":"o")}</div>
        </section>
-      </header>
-       
-       {show&&<article>
-                <div className='popupdiv'>
-                 <p>Won {winner}!</p>
-                  <button onClick={resetResult}>Reset</button>
-                </div>   
-              </article>}
-      
-      
+      </header> 
     </div>
-   
+      {show&&<article>
+        <div className='popupdiv'>
+        <p>Won {winner}!</p>
+          <button onClick={resetResult}>Reset</button>
+        </div>   
+      </article>}
+      {draw&&<article>
+      <div className='popupdiv'>
+        <p>Draw!</p>
+        <button onClick={resetResult}>Reset</button>
+      </div>   
+      </article>}
+    </>
   );
 }
 

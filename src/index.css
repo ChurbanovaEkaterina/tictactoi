@@ -29,36 +29,39 @@ section div{
 }
 article{
   position: fixed;
-    background: #00000050;
-    width: 200vh;
-    height: 100vh;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
 
 }
-artical p{
+.popupdiv{
+  position: relative;
+  width: 30%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(120vh - 85vh - 20px);
+  border-radius: 4px;
+  padding: 20px;
+  background-color: rgba(68,27,163,.941);
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+p{
   position: relative;
   width: 70%;
   height: auto;
   max-height: 70vh;
-  background: #fff;
   border-radius: 4px;
   padding: 20px;
-  border: 1px solid #999;
-  overflow: auto;
+  color: #fff;
 }
-.popupdiv{
-  width: 20%;
-  height: 20%;
-  background-color: rgba(68, 27, 163, 0.941);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 
-}
 button{
   background: purple 1px solid;
   background-color: purple;
