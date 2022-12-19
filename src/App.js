@@ -47,10 +47,7 @@ function App() {
   }, [count])
 
   
-  console.log("count", count)
-  console.log("firstDiv", firstDiv)
-  console.log("secondDiv", secondDiv)
-  console.log("thirdDiv", thirdDiv)
+
   const resetResult=()=>{
     setFirstDiv(0)
     setSecondDiv(0)
@@ -159,8 +156,10 @@ function App() {
         <div onClick={ninthhDivClick}>{ninthDiv===0?null:(ninthDiv%2===1?"x":"o")}</div>
        </section>
        {show&&<article>
-                <p>Won {winner}!</p>
-                <button onClick={resetResult}>Reset</button>
+                <div className='popupdiv'>
+                 <p>Won {winner}!</p>
+                  <button onClick={resetResult}>Reset</button>
+                </div>   
               </article>}
       </header>
       
